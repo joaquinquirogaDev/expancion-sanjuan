@@ -7,6 +7,7 @@ export default function Login() {
     console.log(use);
     return (
         <>
+        <h1>Bienvenido {use.state}</h1>
             <input type="text" placeholder="dni" />
             <input type="text" placeholder="password" />
             <button>Acceder</button>
