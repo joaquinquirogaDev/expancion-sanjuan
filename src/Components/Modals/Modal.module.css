@@ -1,0 +1,132 @@
+.modal__head {
+     width: 100%;
+     display: flex;
+     justify-content: right;
+}
+
+.modal__close {
+     font-size: 26px;
+     cursor: pointer;
+}
+
+.modal__body {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+input {
+     width: 100%;
+     max-width: 450px;
+     padding: 10px;
+     border: 1px solid gray;
+     border-radius: 10px;
+}
+
+/* Login */
+
+.modal__login {
+     width: 100%;
+     display: flex;
+     gap: 10px;
+}
+
+.modal__login__form {
+     width: 500px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 25px;
+}
+
+.modal__login__inputs {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 20px;
+}
+
+.modal__login__btns {
+     width: 100%;
+     max-width: 450px;
+     display: flex;
+     gap: 10px;
+}
+
+.modal__login__logo {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+/* Register */
+
+.modal__register__container{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 30px;
+}
+
+.modal__register__logo {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 20px;
+}
+
+.modal__register__logo__prod {
+     width: 350px;
+}
+
+.modal__register__inputs {
+     width: 700px;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+
+.modal__register__input {
+     display: flex;
+     gap: 10px;
+}
+
+.modal__register__btns {
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     gap: 10px;
+}
+
+/* Medias */
+
+@media screen and (max-width: 769px) {
+     .modal__login__logo {
+          display: none;
+     }
+}
+
+@media screen and (max-width: 600px) {
+     .modal__login__form,
+     .modal__register__inputs {
+          width: 300px;
+     }
+
+     .modal__register__logo__prod {
+          width: 270px;
+     }
+
+     .modal__register__input {
+          flex-direction: column;
+     }     
+}
+
+@media screen and (max-width: 370px) {
+     .modal__login__form,
+     .modal__register__inputs {
+          width: 260px;
+     }
+}

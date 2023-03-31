@@ -1,5 +1,9 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+
+import Nav from './Components/Nav/Nav'
+import Footer from './Components/Footer/Footer'
+
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
 import HomeCitizen from './Pages/HomeCitizen/HomeCitizen';
@@ -8,6 +12,7 @@ function App() {
 
   return (
       <Router>
+        <Nav />
         <Routes>
           <Route path='/' exact element={<Home/>}/>
           <Route path='/login' exact element={<Login/>}/>
@@ -15,6 +20,7 @@ function App() {
           <Route path='/admin' exact element={<Admin/>}/>
 
         </Routes>
+        <Footer />
       </Router>
   )
 }
