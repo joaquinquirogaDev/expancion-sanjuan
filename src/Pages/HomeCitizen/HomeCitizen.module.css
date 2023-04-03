@@ -1,0 +1,22 @@
+.homeCitizen {
+     padding: 20px 100px;
+}
+
+.homeCitizen__text {
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+
+.homeCitizen__btns{
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     gap: 10px;
+}
+
+@media screen and (max-width: 600px) {
+     .homeCitizen {
+          padding: 20px;
+     }
+}
