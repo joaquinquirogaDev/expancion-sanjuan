@@ -13,11 +13,15 @@ import SectionSix from '../../Components/Sections/SectionSix'
 import SectionSeven from '../../Components/Sections/SectionSeven'
 import SectionEight from '../../Components/Sections/SectionEight'
 import Turn from '../../Components/Modals/Turn/Turn'
+import Slice from '../../Components/Slice/Slice'
 
 
 export default function HomeCitizen() {
 
     const [step, useStep] = useState(1)
+    const [slice, setSlice] = useState(1)
+    const [array, setArray] = useState([1,2,3,5,6,7])
+    console.log(slice);
 
     return (
         <div className={style.homeCitizen}>
@@ -46,17 +50,29 @@ export default function HomeCitizen() {
                                             : <></>
             }
             <br />
+            <br />
+            <div className={style.homeCitizen_slice}>
+               <Slice setStep={useStep} step={step} array={array}/>
+            </div>
+            <br />
             <div className={style.homeCitizen__btns}>
                 {step == 1
                     ? <button className='btn__gris'>ATRAS</button>
-                    : <button onClick={() => useStep(step - 1)} className='btn__bordo'>ATRAS</button>
+                    : <button onClick={() => {
+                        useStep(step - 1)
+                        setSlice(slice - 1)
+                    }} className='btn__bordo'>ATRAS</button>
                 }
                 {
                     step == 8
                     ? <Turn />
-                    : <button onClick={() => useStep(step + 1)} className='btn__bordo'>SIGUIENTE</button>
+                    : <button onClick={() => {
+                        useStep(step + 1)
+                        setSlice(slice + 1)
+                    }} className='btn__bordo'>SIGUIENTE</button>
                 }
             </div>
+      
         </div>
     )
 }
