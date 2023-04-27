@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router"
-import { useHookState } from "../../Hooks/useHookState"
 
 // Styles
 import style from './Login.module.css'
@@ -15,15 +14,13 @@ import { HiArrowNarrowLeft } from 'react-icons/hi'
 
 export default function Login() {
     const navigate = useNavigate()
-    const use = useHookState()
-    console.log(use);
     return (
         <div className="view">
             <div className={style.login__container}>
                 <div className={style.login__left}>
                     <div>
                         <div className={style.login__left__text}>
-                            <h3>Bienvenido/a {use.state}</h3>
+                            <h3>Bienvenido/a</h3>
                             <h1>EXPANSIÓN SAN JUAN</h1>
                             <h2>Prestamos activos para que puedas realizar tus proyectos de invertir en San Juan </h2>
                         </div>

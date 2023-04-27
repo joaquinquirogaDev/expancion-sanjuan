@@ -10,6 +10,7 @@ import { IoClose } from "react-icons/io5";
 // Images
 import User from '../../../assets/images/user.svg'
 import LogoVertical from '../../../assets/images/logos/LogoVertical.svg'
+import { useNavigate } from 'react-router';
 
 const customStyles = {
      content: {
@@ -25,7 +26,7 @@ const customStyles = {
 export default function Login() {
 
      const [modalIsOpen, setIsOpen] = React.useState(false);
-
+     const navigate = useNavigate()
      function openModal() {
           setIsOpen(true);
      }
@@ -56,7 +57,10 @@ export default function Login() {
                                         <input type="password" name="" id="" placeholder='Ingresa tu contraceña'/>
                                    </div>
                                    <div className={style.modal__login__btns}>
-                                        <button className='btn__bordo'>INGRESAR</button>
+                                        <button 
+                                        className='btn__bordo'
+                                        onClick={() => navigate('/home-citizen')}
+                                        >INGRESAR</button>
                                         <button onClick={closeModal} className='btn__bordo'>CANCELAR</button>
                                    </div>
                               </div>

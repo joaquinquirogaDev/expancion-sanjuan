@@ -1,7 +1,7 @@
 .Slices{
-    width: 100%;
+    width: 30%;
     height: 20px;
-    background-color: #D9D9D9;
+    background-color: black;
     min-width: 100px;
     color: transparent;
 }

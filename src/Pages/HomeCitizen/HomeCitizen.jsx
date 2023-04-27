@@ -19,9 +19,7 @@ import Slice from '../../Components/Slice/Slice'
 export default function HomeCitizen() {
 
     const [step, useStep] = useState(1)
-    const [slice, setSlice] = useState(1)
-    const [array, setArray] = useState([1,2,3,5,6,7])
-    console.log(slice);
+    const [array, setArray] = useState([{item: true, id: 1},{item: false, id: 2},{item: false, id: 3},{item: false, id: 4},{item: false, id: 5},{item: false, id: 6}])
 
     return (
         <div className={style.homeCitizen}>
@@ -32,7 +30,7 @@ export default function HomeCitizen() {
             </div>
             <br />
             {step == 1
-                ? <section><SectionOne /></section>
+                ? <section ><SectionOne/></section>
                 : step == 2
                     ? <section><SectionTwo /></section>
                     : step == 3
@@ -60,7 +58,6 @@ export default function HomeCitizen() {
                     ? <button className='btn__gris'>ATRAS</button>
                     : <button onClick={() => {
                         useStep(step - 1)
-                        setSlice(slice - 1)
                     }} className='btn__bordo'>ATRAS</button>
                 }
                 {
@@ -68,7 +65,6 @@ export default function HomeCitizen() {
                     ? <Turn />
                     : <button onClick={() => {
                         useStep(step + 1)
-                        setSlice(slice + 1)
                     }} className='btn__bordo'>SIGUIENTE</button>
                 }
             </div>
