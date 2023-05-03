@@ -6,6 +6,9 @@
 :root {
   --bordo: #9B0F28;
   --gris: #D9D9D9;
+  --amarillo: #F39400;
+  --naranja: #E2500C;
+  --rojo: #E52312;
 }
 
 * {
